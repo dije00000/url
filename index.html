@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Checker - تحميل التطبيق</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #121212;
+            color: #e1e1e1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .content {
+            text-align: center;
+            background: #1f1f1f;
+            padding: 5vw 8vw;
+            border-radius: 10px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 600px;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .logo-img {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3vw;
+            color: #2d87f0;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-size: 1.5vw;
+            color: #bbb;
+            margin-top: 10px;
+        }
+
+        .input-container {
+            margin-bottom: 30px;
+        }
+
+        .download-btn {
+            padding: 2vh 4vw;
+            background-color: #2d87f0;
+            color: white;
+            border: none;
+            font-size: 1.6vw;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #1a6ebf;
+            transform: scale(1.05);
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 1.2vw;
+            color: #777;
+        }
+
+        .footer a {
+            color: #2d87f0;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 6vw 10vw;
+            }
+
+            h1 {
+                font-size: 5vw;
+            }
+
+            .subtitle {
+                font-size: 2.5vw;
+            }
+
+            .download-btn {
+                font-size: 4vw;
+            }
+
+            .footer {
+                font-size: 2vw;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content {
+                padding: 8vw 12vw;
+            }
+
+            h1 {
+                font-size: 6vw;
+            }
+
+            .subtitle {
+                font-size: 3.5vw;
+            }
+
+            .download-btn {
+                font-size: 5vw;
+            }
+
+            .footer {
+                font-size: 2.5vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="header">
+                <img src="logo.png" alt="شعار الشركة" class="logo-img">
+                <h1>URL Checker</h1>
+                <p class="subtitle">حمل التطبيق الآن على جهازك</p>
+            </div>
+
+            <div class="input-container">
+                <button id="downloadBtn" class="download-btn">تحميل التطبيق</button>
+            </div>
+
+            <div class="footer">
+                <p> <strong>Design Graphic</strong></p>
+                <p><a href="mhtrfbyjylayt2@gmail.com">لأي استفسار، تواصل معنا عبر البريد الإلكتروني</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            const link = document.createElement('a');
+            link.href = 'url.checker1_1.0.apk'; // اسم ملف APK محلي داخل نفس المجلد أو المسار المناسب
+            link.download = 'url.checker1_1.0.apk'; // الاسم الذي سيتم تحميل الملف به
+            link.click();
+        });
+    </script>
+</body>
+</html>
